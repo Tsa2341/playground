@@ -1,6 +1,6 @@
-FROM busybox
+FROM node
+RUN ls
+COPY . .
 RUN pwd
 RUN ls
-COPY script.sh ./src/scrript
-RUN ["/bin/bash", "./script.sh"]
-CMD ["sleep", "10000"]
+CMD ["/bin/bash", "./script.sh"]
