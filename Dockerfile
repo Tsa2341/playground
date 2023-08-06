@@ -1,6 +1,5 @@
-FROM node
-RUN ls
-COPY . .
-RUN pwd
-RUN ls
-CMD ["/bin/bash", "./script.sh"]
+FROM debian
+COPY . /src
+WORKDIR /src
+CMD ["/bin/bash", "/src/script.sh"]
+EXPOSE 80
